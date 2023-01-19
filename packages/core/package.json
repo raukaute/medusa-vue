@@ -14,11 +14,11 @@
   "author": "Ulrich Krause <hello@raukaute.com",
   "homepage": "",
   "directories": {
-    "lib": "lib",
+    "dist": "dist",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
@@ -54,7 +54,7 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.16.0",
-    "@size-limit/preset-small-lib": "^6.0.4",
+    "@size-limit/preset-small-dist": "^6.0.4",
     "@types/lodash": "^4.14.177",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/test-utils": "^2.2.7",
@@ -65,7 +65,7 @@
     "jsdom": "^21.0.0",
     "msw": "^0.35.0",
     "size-limit": "^6.0.4",
-    "tslib": "^2.3.1",
+    "tsdist": "^2.3.1",
     "vitest": "^0.27.1",
     "vue": "^3.2.38"
   },

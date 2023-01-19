@@ -15,7 +15,7 @@ import {
 
 import { buildOptions } from '../../utils/buildOptions';
 import { useMedusa } from '../../../useApi';
-import { paymentCollectionQueryKeys } from '.';
+import { paymentCollectionQueryKeys } from './queries';
 
 export const useManageMultiplePaymentSessions = (
   id: string,

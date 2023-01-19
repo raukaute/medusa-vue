@@ -8,7 +8,7 @@ import {
   useMutation,
   useQueryClient,
 } from '@tanstack/vue-query';
-import { orderKeys } from '.';
+import { orderKeys } from './queries';
 import { useMedusa } from '../../../useApi';
 import { buildOptions } from '../../utils/buildOptions';
 

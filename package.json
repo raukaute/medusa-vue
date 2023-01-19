@@ -4,6 +4,7 @@
   "publishConfig": {
     "access": "public"
   },
+  "scripts": {},
   "workspaces": [
     "packages/*"
   ],

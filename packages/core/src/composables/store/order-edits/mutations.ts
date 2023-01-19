@@ -12,7 +12,7 @@ import {
 
 import { buildOptions } from '../../utils/buildOptions';
 import { useMedusa } from '../../../useApi';
-import { orderEditQueryKeys } from '.';
+import { orderEditQueryKeys } from './queries';
 
 export const useDeclineOrderEdit = (
   id: string,
