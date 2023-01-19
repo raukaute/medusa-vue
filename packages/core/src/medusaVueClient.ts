@@ -6,7 +6,6 @@ import { medusaKey } from './injectionSymbols';
 
 interface MedusaVueClientProps {
   baseUrl: string;
-  queryClientProviderProps: VueQueryPluginOptions;
   maxRetries?: number;
   /**
    * Authentication token
@@ -17,6 +16,8 @@ interface MedusaVueClientProps {
    * available within the request
    */
   publishableApiKey?: string;
+
+  queryClientProviderProps?: VueQueryPluginOptions;
 }
 
 export const createMedusaVueClient = (options: MedusaVueClientProps) => {
