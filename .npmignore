@@ -10,3 +10,4 @@ public/
 mocks/
 stories/
 yarn.lock
+.npmrc
