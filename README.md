@@ -94,7 +94,7 @@ const { data, error, isLoading } = useProducts();
 [Mutations](https://react-query.tanstack.com/guides/mutations#_top) wrap around vue-query's `useMutation` to mutate data and perform server-side effects on your medusa server. If you are not entirely familiar with this idea of "mutations", creating a cart would be a mutation because it creates a cart in your server (and database). Mutations also have to be invoked imperatively, meaning that calling for the mutation to take action, you will have to call a `mutate()` function returned from mutation hooks.
 
 ```vue
-<script setup lang="ts>
+<script setup lang="ts">
 import { useCreateCart } from '@medusa-vue/core';
 
 const createCart = useCreateCart();
@@ -104,7 +104,7 @@ const handleClick = () => {
 </script>
 
 <template>
-  <Button isLoading={createCart.isLoading} onClick={handleClick}>
+  <Button isLoading="{createCart.isLoading}" onClick="{handleClick}">
     Create cart
   </Button>
 </template>
