@@ -1,6 +1,6 @@
 {
-  "name": "root",
-  "private": true,
+  "name": "medusa-vue",
+  "version": "0.0.0",
   "publishConfig": {
     "access": "public"
   },
