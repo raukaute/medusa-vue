@@ -9,10 +9,10 @@ import {
   h,
   reactive,
 } from 'vue';
+import { makeTagProps } from '../../util/makeProps';
+import type { TagProps } from '../../util/makeProps';
 
-export interface MedusaVueComponentProps {
-  as?: string;
-}
+export interface MedusaVueComponentProps extends TagProps {}
 
 export interface UseMedusaProductsComponentProps
   extends MedusaVueComponentProps {}
@@ -20,10 +20,7 @@ export interface UseMedusaProductsComponentProps
 export const UseMedusaProductsImplementation = /*#__PURE__*/ defineComponent({
   name: 'UseMedusaProducts',
   props: {
-    as: {
-      type: String,
-      required: false,
-    },
+    ...makeTagProps(),
   },
 
   setup(props, { slots }) {
@@ -33,7 +30,7 @@ export const UseMedusaProductsImplementation = /*#__PURE__*/ defineComponent({
       const slotProps = reactive(data);
       const children = slots.default && slots.default(slotProps);
       const fallback = slots.fallback && slots.fallback();
-      const component = props.as ? h(props.as, {}, children) : children;
+      const component = props.tag ? h(props.tag, {}, children) : children;
 
       return (data.isLoading.value && fallback) || component;
     };

@@ -1,3 +1,3 @@
-import { UseProducts } from './products';
+import { UseProducts } from './store/products';
 
 export { UseProducts };
