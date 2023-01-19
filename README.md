@@ -85,7 +85,7 @@ const { data, error, isLoading } = useProducts();
 </template>
 ```
 
-**_Note_**: If you've worked with @medusajs/medusa-react you might be used to being able to destructure the recordset returned by the server, i.e. `const { products } = useProducts()`. This is however not possible with vue due to the way it's reactive system works.
+**_Note_**: If you've worked with @medusajs/medusa-react you might be used to being able to destructure the recordset returned by the server directly, i.e. `const { products } = useProducts()`. This is however not possible with vue due to the way it's reactive system works.
 
 ### Mutations
 
