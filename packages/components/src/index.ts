@@ -1,1 +1,3 @@
-export * from '@medusa-vue/core/src/composables/store/products/component';
+import { UseProducts } from './products';
+
+export { UseProducts };

@@ -1,4 +1,4 @@
-import { useProducts } from './queries';
+import { useProducts } from '@medusa-vue/core';
 import {
   AllowedComponentProps,
   ComponentCustomProps,
