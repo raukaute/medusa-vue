@@ -64,8 +64,6 @@ const app = createApp(App);
 app.use(client).mount('#app');
 ```
 
-The hooks exposed by `medusa-vue` fall into two main categories: queries and mutations.
-
 ### Queries
 
 [Queries](https://tanstack.com/query/v4/docs/vue/guides/queries) simply wrap around vue-query's `useQuery` hook to fetch some data from your medusa server
