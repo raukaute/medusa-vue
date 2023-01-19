@@ -87,7 +87,7 @@ const { data, error, isLoading } = useProducts();
 </template>
 ```
 
-Note: If you've worked with @medusajs/medusa-react you might be used to being able to destructure the recordset returned by the server, i.e. `const { products } = useProducts()`. This is however not possible with vue due to the way it's reactive system works.
+**_Note_**: If you've worked with @medusajs/medusa-react you might be used to being able to destructure the recordset returned by the server, i.e. `const { products } = useProducts()`. This is however not possible with vue due to the way it's reactive system works.
 
 ### Mutations
 
@@ -111,6 +111,48 @@ const handleClick = () => {
 ```
 
 The mutation hooks will return exactly what vue-query's [`useMutation`](https://tanstack.com/query/v4/docs/vue/guides/mutations) returns. In addition, the options you pass in to the hooks will be passed along to `useMutation`.
+
+### Components
+
+**_NOTE_**: This is still work in progress and new components will gradually be added!:construction_worker:
+
+If you prefer declarative templates, `@medusa-vue/components` provided (almost) renderless components to use directly in your template and provide data through `slot-props`. This allows for extremely streamlinend and declarative templating:
+
+```
+<script setup lang="ts">
+import { UseProducts } from '@medusa-vue/components'
+</script>
+
+<template>
+  <use-products v-slot="{ data, isLoading }">
+    <loading-spinner v-if="isLoading" />
+
+    <product-list :products="data.products" />
+  </use-products>
+</template>
+```
+
+The component also allows to pass down the laoding indicating component via a slot:
+
+```
+<script setup lang="ts">
+import { UseProducts } from '@medusa-vue/components'
+</script>
+
+<template>
+  <use-products>
+    <template #fallback>
+      <div>
+        Loading....
+      </div>
+    </template>
+
+    <template v-slot="{ data, isLoading }">
+      <product-list :products="data.products" />
+    </template>
+  </use-products>
+</template>
+```
 
 ### Utilities
 
