@@ -1,6 +1,6 @@
 {
   "name": "@medusa-vue/core",
-  "version": "0.0.9",
+  "version": "0.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -78,5 +78,5 @@
   "msw": {
     "workerDirectory": "public"
   },
-  "gitHead": "1a21becfc8c75fa7c735a52c7201ad870487845d"
+  "gitHead": "8133167d298f478e63187c0327f0ee0d9b46ec01"
 }
