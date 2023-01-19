@@ -48,7 +48,7 @@ interface MedusaVueClientProps {
 
 Plug it in:
 
-```
+```ts
 // main.ts
 import { createApp } from 'vue';
 import App from './App.vue';
@@ -93,7 +93,7 @@ const { data, error, isLoading } = useProducts();
 
 [Mutations](https://react-query.tanstack.com/guides/mutations#_top) wrap around vue-query's `useMutation` to mutate data and perform server-side effects on your medusa server. If you are not entirely familiar with this idea of "mutations", creating a cart would be a mutation because it creates a cart in your server (and database). Mutations also have to be invoked imperatively, meaning that calling for the mutation to take action, you will have to call a `mutate()` function returned from mutation hooks.
 
-```ts
+```vue
 <script setup lang="ts>
 import { useCreateCart } from '@medusa-vue/core';
 
