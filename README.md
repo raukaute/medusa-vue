@@ -118,9 +118,9 @@ The mutation hooks will return exactly what vue-query's [`useMutation`](https://
 
 If you prefer declarative templates, `@medusa-vue/components` provided (almost) renderless components to use directly in your template and provide data through `slot-props`. This allows for extremely streamlinend and declarative templating:
 
-```
+```vue
 <script setup lang="ts">
-import { UseProducts } from '@medusa-vue/components'
+import { UseProducts } from '@medusa-vue/components';
 </script>
 
 <template>
@@ -134,17 +134,15 @@ import { UseProducts } from '@medusa-vue/components'
 
 The component also allows to pass down the laoding indicating component via a slot:
 
-```
+```vue
 <script setup lang="ts">
-import { UseProducts } from '@medusa-vue/components'
+import { UseProducts } from '@medusa-vue/components';
 </script>
 
 <template>
   <use-products>
     <template #fallback>
-      <div>
-        Loading....
-      </div>
+      <div>Loading....</div>
     </template>
 
     <template v-slot="{ data, isLoading }">
