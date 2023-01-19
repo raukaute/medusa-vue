@@ -3,6 +3,7 @@
   "version": "0.1.1",
   "license": "MIT",
   "main": "dist/index.js",
+  "module": "dist/core.esm.js",
   "typings": "dist/index.d.ts",
   "description": "Vue composables to interact with @medusa api",
   "keywords": [
@@ -41,7 +42,6 @@
       "pre-commit": "tsdx lint"
     }
   },
-  "module": "dist/medusa-vue.esm.js",
   "size-limit": [
     {
       "path": "dist/medusa-vue.cjs.production.min.js",
