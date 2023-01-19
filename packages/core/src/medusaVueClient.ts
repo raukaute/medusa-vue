@@ -8,7 +8,6 @@ interface MedusaVueClientProps {
   baseUrl: string;
   queryClientProviderProps: VueQueryPluginOptions;
   maxRetries?: number;
-
   /**
    * Authentication token
    */
@@ -30,7 +29,7 @@ export const createMedusaVueClient = (options: MedusaVueClientProps) => {
         maxRetries: options.maxRetries || 1,
       });
 
-      const vueQueryPluginOptions: VueQueryPluginOptions = {
+      const defaultVueQueryPluginOptions: VueQueryPluginOptions = {
         queryClientConfig: {
           defaultOptions: {
             queries: {
@@ -45,7 +44,10 @@ export const createMedusaVueClient = (options: MedusaVueClientProps) => {
 
       app.provide(medusaKey, { client: medusa });
 
-      app.use(VueQueryPlugin, vueQueryPluginOptions);
+      app.use(
+        VueQueryPlugin,
+        options.queryClientProviderProps || defaultVueQueryPluginOptions
+      );
     },
   };
 

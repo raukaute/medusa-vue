@@ -1,8 +1,9 @@
 {
   "name": "@medusa-vue/core",
-  "version": "0.0.1-alpha.0",
+  "version": "0.4.0",
   "license": "MIT",
   "main": "dist/index.js",
+  "module": "dist/core.esm.js",
   "typings": "dist/index.d.ts",
   "description": "Vue composables to interact with @medusa api",
   "keywords": [
@@ -14,11 +15,11 @@
   "author": "Ulrich Krause <hello@raukaute.com",
   "homepage": "",
   "directories": {
-    "lib": "lib",
+    "dist": "dist",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
@@ -26,7 +27,6 @@
   "scripts": {
     "start": "dts watch",
     "build": "dts build",
-    "prepare": "dts build",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "dts lint",
@@ -42,7 +42,6 @@
       "pre-commit": "tsdx lint"
     }
   },
-  "module": "dist/medusa-vue.esm.js",
   "size-limit": [
     {
       "path": "dist/medusa-vue.cjs.production.min.js",
@@ -78,5 +77,6 @@
   },
   "msw": {
     "workerDirectory": "public"
-  }
+  },
+  "gitHead": "5e0d6d7b5525a33a1855c022c1b4e3507a093f2d"
 }

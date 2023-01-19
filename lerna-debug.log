@@ -1,0 +1,15 @@
+31 error Error: Command failed with exit code 1: npm install --package-lock-only --ignore-scripts
+31 error npm ERR! code E404
+31 error npm ERR! 404 Not Found - GET https://registry.npmjs.org/@size-limit%2fpreset-small-dist - Not found
+31 error npm ERR! 404
+31 error npm ERR! 404  '@size-limit/preset-small-dist@^6.0.4' is not in this registry.
+31 error npm ERR! 404
+31 error npm ERR! 404 Note that you can also install from a
+31 error npm ERR! 404 tarball, folder, http url, or git url.
+31 error
+31 error npm ERR! A complete log of this run can be found in:
+31 error npm ERR!     /Users/ulikrause/.npm/_logs/2023-01-19T16_54_22_946Z-debug-0.log
+31 error     at makeError (/Users/ulikrause/code/@medusa-vue/node_modules/execa/lib/error.js:60:11)
+31 error     at handlePromise (/Users/ulikrause/code/@medusa-vue/node_modules/execa/index.js:118:26)
+31 error     at processTicksAndRejections (node:internal/process/task_queues:96:5)
+31 error     at async Promise.all (index 0)
