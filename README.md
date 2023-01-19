@@ -71,8 +71,6 @@ app.use(client).mount('#app');
 ```vue
 // ./my-product-list.vue
 <script setup lang="ts">
-import { watch } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
 import { useProducts } from '@medusa-vue/core';
 
 const { data, error, isLoading } = useProducts();
